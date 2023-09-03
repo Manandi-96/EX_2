@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Script_EX1</title>
+</head>
+<body>
+    <!--Cart has a maximum quantity of 10, and minimum of 0-->
+    <button onclick="console.log(`cart quantity:${CartQuantity}`);">
+        Show Quantity
+    </button>
+
+    <button
+    onclick=" CartQuantity= CartQuantity+1;
+    if(CartQuantity>=0 && CartQuantity<=10){
+        console.log(`cart quantity: ${CartQuantity}`);}
+    else if (CartQuantity>10){
+        console.log('Cart is full');
+    }
+    >
+     Add to cart
+    </button>
+
+    <button
+    onclick=" CartQuantity= CartQuantity+2;
+    console.log(`cart quantity: ${CartQuantity}`);"
+    > +2</button>
+
+    <button
+    onclick=" CartQuantity= CartQuantity+3;
+    console.log(`cart quantity: ${CartQuantity}`);">+3</button>
+    <button> +3</button>
+
+    <button onclick=" CartQuantity=0;
+    console.log('Cart was reset')
+    console.log(` cart quantity :${CartQuantity}`)"
+    >Reset cart</button>
+
+    <script>
+        let CartQuantity=0;
+    </script>
+</body>
